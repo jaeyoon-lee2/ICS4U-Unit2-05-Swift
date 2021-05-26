@@ -12,7 +12,8 @@ class Vehicle {
   private var speed: Int
 
   // Constructor
-  init(licensePlateNumber: String, colour: String, numberOfDoors: Int, maxSpeed: Int) {
+  init(licensePlateNumber: String, colour: String, numberOfDoors: Int,
+                                                    maxSpeed: Int) {
     self.licensePlateNumber = licensePlateNumber
     self.colour = colour
     self.numberOfDoors = numberOfDoors

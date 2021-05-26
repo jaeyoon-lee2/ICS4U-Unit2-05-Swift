@@ -9,7 +9,6 @@ enum InvalidInputError : Error {
   case invalidInput
 }
 
-
 do {
   print("Enter the license plate number: ", terminator:"")
   let licensePlateNumber = String(readLine()!)
@@ -24,7 +23,9 @@ do {
     throw InvalidInputError.invalidInput
   }
 
-  let myVehicle = Vehicle(licensePlateNumber: licensePlateNumber, colour: colour, numberOfDoors: numberOfDoors, maxSpeed: maxSpeed)
+  let myVehicle = Vehicle(licensePlateNumber: licensePlateNumber,
+                          colour: colour, numberOfDoors: numberOfDoors,
+                          maxSpeed: maxSpeed)
 
   print("")
 
@@ -47,7 +48,7 @@ do {
       myVehicle.Brake(decrement: decrement)
     } else if (inputString == "LICENSE") {
       print("Enter the new license plate number: ", terminator:"")
-      myVehicle.SetLicensePlateNumber(newLicensePlateNumber: String(readLine()!))
+      myVehicle.SetLicensePlateNumber(newLicensePlateNumber:String(readLine()!))
     } else if (inputString == "COLOUR") {
       print("Enter the new colour of the car: ", terminator:"")
       myVehicle.SetColour(newColour: String(readLine()!))
